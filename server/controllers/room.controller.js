@@ -1,9 +1,18 @@
 import Room from '../models/rooms.model.js';
+import {uploadOnCloudinary } from '../utils/cloudinary.js'
+
 
 const createRoom = async (req, res) => {
   try {
     const { roomType, price, availabilityStatus, description, images, features } = req.body;
-    console.log('Request Body:', req.body);
+    console.log('Request images:', req.files );
+
+    const imageArray = req.files.map((obj) => {
+        return obj.path
+    })
+    console.log("--------> ",imageArray)
+
+    const arrayOfImages = await uploadOnCloudinary(imageArray)
 
 // Split the string by commas and store them in an array
 const featuresArray = features.split(',').map(item => item.trim());
@@ -20,7 +29,7 @@ console.log(featuresArray);
       price,
       availabilityStatus,
       description,
-      images, // Assuming images are uploaded and URLs are passed here
+      images : arrayOfImages, // Assuming images are uploaded and URLs are passed here
       features : featuresArray
     });
     console.log('2')
