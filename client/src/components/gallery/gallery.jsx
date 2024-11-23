@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
+import images from '../../assets/data/gallery';
+import Footer from '../shared/footer';
 
-const images = [
-  { src: 'https://via.placeholder.com/600x400', alt: 'Image 1' },
-  { src: 'https://via.placeholder.com/800x600', alt: 'Image 2' },
-  { src: 'https://via.placeholder.com/500x500', alt: 'Image 3' },
-  { src: 'https://via.placeholder.com/1200x800', alt: 'Image 4' },
-  // Add more images as needed
-];
 
 const Gallery = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +27,8 @@ const Gallery = () => {
   };
 
   return (
+    <div>
+
     <div className='mx-24 font-serif'>
         <div className='mb-12'>
             <h1 className='text-[70px] text-green-800 font-thin'>Gallery</h1>
@@ -48,8 +45,8 @@ const Gallery = () => {
         {images.map((image, index) => (
           <div key={index} className="relative">
             <img
-              src={image.src}
-              alt={image.alt}
+            src={image}
+            alt={`Gallery Image ${index + 1}`}
               className="object-cover w-full h-full cursor-pointer"
               onClick={() => openLightbox(index)}
             />
@@ -71,8 +68,7 @@ const Gallery = () => {
 
             {/* Image */}
             <img
-              src={images[currentImageIndex].src}
-              alt={images[currentImageIndex].alt}
+              src={images[currentImageIndex]}
               className="max-w-full max-h-[90vh] object-contain mx-auto"
             />
 
@@ -92,6 +88,8 @@ const Gallery = () => {
           </div>
         </div>
       )}
+    </div>
+    <Footer/>
     </div>
   );
 };
