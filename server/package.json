@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mr0-0kushal/RoomEase.git"
+  },
+  "author": "Code-Eaters",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mr0-0kushal/RoomEase/issues"
+  },
+  "homepage": "https://github.com/mr0-0kushal/RoomEase#readme"
+}
