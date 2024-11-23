@@ -1,68 +1,83 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.imageC {
+    position: relative;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+ 
+.imgC .tint {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.47);
 }
-a:hover {
-  color: #535bf2;
-}
+.imgC .bgk{
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    /* Optional: for centering */
+    justify-content: center;
+    align-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Navbar CSS */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1; 
+    }
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.h1-animation {
+    animation: fadeIn 0.7s ease-in-out backwards;      
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+
+/* Navbar MINI CSS */ 
+.opt {
+    padding: 15px;
+    background-color: rgba(130, 178, 255, 0.838);
+    border-radius: 20px;
+    flex-direction: column;
   }
-  a:hover {
-    color: #747bff;
+  .opt .opts {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #4E54C8;
+    background-color: antiquewhite;
+    border-radius: 80px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 400ms;  
   }
-  button {
-    background-color: #f9f9f9;
+  
+  .opt .opts p.tip {
+    font-size: 1em;
+    font-weight: 700;
   }
-}
+  
+  .opt .opts p.second-text {
+    font-size: .7em;
+  }
+  
+  .opt .opts:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  .opt:hover > .opts:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+  }
