@@ -11,8 +11,7 @@ const NavbarMini = () => {
 
   return (
     <nav className="bg-transparent w-full text-white">
-      <div className="container flex gap-6 justify-end w-full items-center">
-        <div className="text-2xl font-bold">Hive-Mind</div>
+      <div className="container flex gap-3 justify-end w-full items-center">
         {/* Hamburger Menu (Visible on Mobile) */}
         <button
           className="block md:hidden text-2xl"
