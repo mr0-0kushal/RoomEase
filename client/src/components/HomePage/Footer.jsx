@@ -1,15 +1,14 @@
 import React from 'react'
-import logo from '../../../public/logoWName.svg'
+import logo from '../../assets/LogoWName.svg'
 
 
-const footer = () => {
+const Footer = () => {
     return (
         <div className='p-10 bg-[#1A1117] text-white mt-10'>
             <div className='mb-10 flex justify-center'>
                     <img src={logo} height={100} width={100} alt="" />
                 </div>
             <div classname=" py-8 ">
-                
                 <div classname="container mx-auto flex flex-col items-center">
                     <div class="flex flex-col md:flex-row justify-center space-x-8">
                         <a href="#" class="hover:text-gray-200">ABOUT THE HOTEL</a>
@@ -37,4 +36,4 @@ const footer = () => {
     )
 }
 
-export default footer
+export default Footer;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import images from '../../assets/data/gallery';
-import Footer from '../shared/footer';
+import Footer from '../HomePage/Footer';
 
 
 const Gallery = () => {
@@ -89,7 +89,7 @@ const Gallery = () => {
         </div>
       )}
     </div>
-    <Footer/>
+    < Footer />
     </div>
   );
 };
