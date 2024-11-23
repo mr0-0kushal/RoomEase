@@ -1,31 +1,32 @@
 import mongoose from 'mongoose';
 
-const RoomSchema = new mongoose.Schema({
+const roomSchema = new mongoose.Schema({
   roomType: {
     type: String,
-    required: true, // e.g., Single, Double, Suite
+    enum: ['Standard', 'Family', 'Luxury'],
+    required: true
   },
   price: {
     type: Number,
-    required: true, // Cost per night
+    required: true
   },
   availabilityStatus: {
     type: Boolean,
-    default: true, // Available by default
+    required: true
   },
   description: {
-    type: String, // Optional: Provide additional details about the room
+    type: String,
+    required: true
   },
-  images: [
-    {
-      url: {
-        type: String,
-        required: false, // Optional image URLs
-      },
-    },
-  ],
+  images: [{
+    type: String, // URLs of images or paths stored in your server
+  }],
+  features: [{
+    type: String,
+    enum: ['Wi-Fi', 'Air Conditioning', 'TV', 'Mini Fridge', 'Luxury Bath', 'Balcony', 'Extra Bed'],
+  }]
 });
 
-const Room = mongoose.model('Room', RoomSchema);
+const Room = mongoose.model('Room', roomSchema);
 
 export default Room;
