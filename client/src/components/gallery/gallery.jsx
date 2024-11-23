@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import images from '../../assets/data/gallery';
-import Footer from '../HomePage/Footer';
 
 
 const Gallery = () => {
@@ -28,7 +27,6 @@ const Gallery = () => {
 
   return (
     <div>
-
     <div className='mx-24 font-serif'>
         <div className='mb-12'>
             <h1 className='text-[70px] text-green-800 font-thin'>Gallery</h1>
