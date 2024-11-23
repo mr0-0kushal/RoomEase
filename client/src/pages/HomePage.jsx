@@ -6,17 +6,17 @@ import { useScrollPosition } from '../hooks/useScroll';
 import Logo from '../../public/Logo.svg'
 import LogoWName from '../assets/LogoWName.svg'
 import NavbarMini from '../components/HomePage/NavbarMini';
-
 import HeroSection from '../components/HomePage/HeroSection';
 import HotelAmenities from '../components/HomePage/HotelAmenitis';
 import FeaturedRooms from '../components/HomePage/FeaturedRoom';
 import Testimonials from '../components/HomePage/Testimonials';
 import SpecialOffers from '../components/HomePage/SpecialOffers';
 import DestinationHighlights from '../components/HomePage/Destination';
+import Footer from '../components/HomePage/Footer';
 
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(false);
-
+  
   const checkMobile = () => {
     if (window.innerWidth <= 768) {
       setIsMobile(true); // Set mobile if screen width is <= 768px
@@ -61,6 +61,9 @@ const HomePage = () => {
       </div>
       <div className='p-5'>
         <SpecialOffers />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   )

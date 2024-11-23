@@ -1,12 +1,8 @@
 import React from 'react'
-import IntroSec from '../HomePage/IntroSec'
 import logo from '../../../public/logo.svg'
-import Footer from '../shared/footer'
 
 const contactpage = () => {
     return (
-        <div>
-            <IntroSec />
             <div>
                 <div className='flex  items-center justify-center w-[70%] mx-auto font-serif'>
                     <div className='p-10 text-xl w-[30%] bg-white border border-black shadow-md mx-5'>
@@ -73,9 +69,6 @@ const contactpage = () => {
                     </div>
                 </div>
             </div>
-
-            <Footer />
-        </div>
     )
 }
 
