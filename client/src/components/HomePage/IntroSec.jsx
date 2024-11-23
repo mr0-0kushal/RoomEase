@@ -8,7 +8,7 @@ const IntroSec = () => {
             <img src={Lobby} alt="Lobby" className='bgk h-full w-full' />
             <div className='tint'></div>
             <div className='text-white flex justify-center items-center'>
-                <img src={Slogan} alt="slogan" className='w-[60%] h-[50%]' />
+                <img src={Slogan} alt="slogan" className='md:w-[60%] md:h-[50%]' />
             </div>
         </div>
     )
