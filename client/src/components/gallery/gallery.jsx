@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import images from '../../assets/data/gallery';
-import Footer from '../shared/footer';
+import Footer from '../HomePage/Footer';
 
 
 const Gallery = ({}) => {
@@ -120,13 +120,13 @@ const Gallery = ({}) => {
                             >
                                 &#10095;
                             </button>
-                        </div>
-                    </div>
-                )}
-            </div>
-            <Footer />
+          </div>
         </div>
-    );
+      )}
+    </div>
+    < Footer />
+    </div>
+  );
 };
 
 export default Gallery;
