@@ -20,12 +20,12 @@ app.set('views', './views'); // Set the views directory
 
 // Routes
 // import userRouter from './routers/user.routes.js'
+import adminRouter from './routes/admin.routes.js'
+
+app.use('/api/admin', adminRouter)
+
 // app.use('/api', userRouter)
 
-
-app.get('/', (req, res) => {
-    res.send('Hello, this is testing!');
-});
 
 // Start MongoDb and the server
 connectDB()
