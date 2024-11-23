@@ -21,7 +21,7 @@
     z-index: -2;
     top: 0;
     left: 0;
-
+    display: flex;
     /* Optional: for centering */
     justify-content: center;
     align-items: center;
@@ -80,4 +80,30 @@
   .opt:hover > .opts:not(:hover) {
     filter: blur(10px);
     transform: scale(0.9, 0.9);
+  }
+
+  .hero .background{
+    position: absolute;
+    z-index: -2;
+    top: -200px;
+    left: 0;
+    /* Optional: for centering */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .herobtn {
+    background-color: rgba(222, 184, 135, 0.589);
+  }
+  .herobtn:hover , .fbtn:hover {
+    transform: scale(1.05);
+  }
+  .feature .background{
+    position: absolute;
+    z-index: -2;
+    top: -200px;
+    left: 0;
+    /* Optional: for centering */
+    justify-content: center;
+    align-items: center;
   }
