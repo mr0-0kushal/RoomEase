@@ -16,7 +16,6 @@ import Footer from '../components/HomePage/Footer';
 
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(false);
-  
   const checkMobile = () => {
     if (window.innerWidth <= 768) {
       setIsMobile(true); // Set mobile if screen width is <= 768px
@@ -44,10 +43,10 @@ const HomePage = () => {
       <div className='relative'>
         <IntroSec />
       </div>
-      <div className='p-5'>
+      <div className=''>
         <HeroSection />
       </div>
-      <div className='p-5'>
+      <div className=''>
         <FeaturedRooms />
       </div>
       <div className='p-5'>
