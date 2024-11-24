@@ -1,0 +1,414 @@
+[
+    {
+        "roomType": "Standard",
+        "price": 120,
+        "availabilityStatus": true,
+        "specifications": [
+            "👥 Up to 2 people",
+            "📏 25 sq. m.",
+            "🚪 1 room"
+        ],
+        "description": "A cozy standard room with all the basic amenities like Wi-Fi, TV, and comfortable bedding.",
+        "images": [
+            "uploads/images/room1_image1.jpg",
+            "uploads/images/room1_image2.jpg"
+        ],
+        "features": [
+            "Wi-Fi",
+            "TV",
+            "Air Conditioning"
+        ]
+    },
+    {
+        "roomType": "Deluxe",
+        "price": 200,
+        "availabilityStatus": true,
+        "specifications": [
+            "👥 Up to 3 people",
+            "📏30 sq. m.",
+            "🚪1 room"
+        ],
+        "description": "A spacious deluxe room with elegant decor and additional seating area.",
+        "images": [
+            "uploads/images/room2_image1.jpg",
+            "uploads/images/room2_image2.jpg"
+        ],
+        "features": [
+            "Wi-Fi",
+            "Mini Fridge",
+            "King-Size Bed"
+        ]
+    },
+    {
+        "roomType": "Family",
+        "price": 250,
+        "availabilityStatus": true,
+        "specifications": [
+            "👥 Up to 5 people",
+            "📏40 sq. m.",
+            "🚪2 rooms"
+        ],
+        "description": "Perfect for families with kids, this room includes multiple beds and extra amenities.",
+        "images": [
+            "uploads/images/room3_image1.jpg",
+            "uploads/images/room3_image2.jpg"
+        ],
+        "features": [
+            "Wi-Fi",
+            "Balcony",
+            "Luxury Bath"
+        ]
+    },
+    {
+        "roomType": "Luxury",
+        "price": 500,
+        "availabilityStatus": false,
+        "specifications": [
+            "👥 Up to 4 people",
+            "📏50 sq. m.",
+            "🚪1 suite"
+        ],
+        "description": "An opulent suite with a private jacuzzi and panoramic views.",
+        "images": [
+            "uploads/images/room4_image1.jpg",
+            "uploads/images/room4_image2.jpg"
+        ],
+        "features": [
+            "Private Jacuzzi",
+            "Balcony",
+            "Air Conditioning"
+        ]
+    },
+    {
+        "roomType": "Economy",
+        "price": 80,
+        "availabilityStatus": true,
+        "specifications": [
+            "👥 Up to 2 people",
+            "📏20 sq. m.",
+            "🚪1 room"
+        ],
+        "description": "A budget-friendly room offering all the basic amenities.",
+        "images": [
+            "uploads/images/room5_image1.jpg",
+            "uploads/images/room5_image2.jpg"
+        ],
+        "features": [
+            "Wi-Fi",
+            "TV",
+            "Comfortable Bedding"
+        ]
+    },
+    {
+        "roomType": "Business Suite",
+        "price": 400,
+        "availabilityStatus": true,
+        "specifications": [
+            "👥 Up to 3 people",
+            "📏45 sq. m.",
+            "🚪1 suite"
+        ],
+        "description": "Designed for business professionals, this suite offers a dedicated workspace and premium amenities.",
+        "images": [
+            "uploads/images/room6_image1.jpg",
+            "uploads/images/room6_image2.jpg"
+        ],
+        "features": [
+            "Wi-Fi",
+            "Workspace",
+            "Mini Fridge"
+        ]
+    },
+    {
+        "roomType": "Executive Suite",
+        "price": 600,
+        "availabilityStatus": false,
+        "specifications": [
+            "👥 Up to 4 people",
+            "📏60 sq. m.",
+            "🚪2 suites"
+        ],
+        "description": "A luxurious suite with a private lounge and stunning interiors.",
+        "images": [
+            "uploads/images/room7_image1.jpg",
+            "uploads/images/room7_image2.jpg"
+        ],
+        "features": [
+            "Private Lounge",
+            "King-Size Bed",
+            "Luxury Bath"
+        ]
+    },
+    {
+        "roomType": "Single Room",
+        "price": 90,
+        "availabilityStatus": true,
+        "specifications": [
+            "👥 Up to 1 person",
+            "📏18 sq. m.",
+            "🚪1 room"
+        ],
+        "description": "A compact room ideal for solo travelers.",
+        "images": [
+            "uploads/images/room8_image1.jpg",
+            "uploads/images/room8_image2.jpg"
+        ],
+        "features": [
+            "Wi-Fi",
+            "TV",
+            "Comfortable Bed"
+        ]
+    },
+    {
+        "roomType": "Penthouse Suite",
+        "price": 1200,
+        "availabilityStatus": false,
+        "specifications": [
+            "👥 Up to 6 people",
+            "100 sq. m.",
+            "🚪3 suites"
+        ],
+        "description": "An exclusive penthouse suite offering ultimate luxury and privacy.",
+        "images": [
+            "uploads/images/room9_image1.jpg",
+            "uploads/images/room9_image2.jpg"
+        ],
+        "features": [
+            "Private Pool",
+            "Jacuzzi",
+            "Panoramic View"
+        ]
+    },
+    {
+        "roomType": "Studio",
+        "price": 180,
+        "availabilityStatus": true,
+        "specifications": [
+            "👥 Up to 2 people",
+            "📏35 sq. m.",
+            "🚪1 studio"
+        ],
+        "description": "A modern studio apartment-style room with a kitchenette.",
+        "images": [
+            "uploads/images/room10_image1.jpg",
+            "uploads/images/room10_image2.jpg"
+        ],
+        "features": [
+            "Wi-Fi",
+            "Kitchenette",
+            "Air Conditioning"
+        ]
+    },
+    {
+        "roomType": "Double Deluxe",
+        "price": 300,
+        "availabilityStatus": true,
+        "specifications": [
+            "👥 Up to 4 people",
+            "📏50 sq. m.",
+            "🚪2 rooms"
+        ],
+        "description": "A spacious deluxe room ideal for small groups.",
+        "images": [
+            "uploads/images/room11_image1.jpg",
+            "uploads/images/room11_image2.jpg"
+        ],
+        "features": [
+            "Wi-Fi",
+            "Balcony",
+            "Mini Fridge"
+        ]
+    },
+    {
+        "roomType": "Presidential Suite",
+        "price": 2000,
+        "availabilityStatus": false,
+        "specifications": [
+            "👥 Up to 8 people",
+            "📏150 sq. m.",
+            "🚪5 suites"
+        ],
+        "description": "The ultimate luxury suite for VIPs, offering unmatched opulence.",
+        "images": [
+            "uploads/images/room12_image1.jpg",
+            "uploads/images/room12_image2.jpg"
+        ],
+        "features": [
+            "Private Pool",
+            "Jacuzzi",
+            "Home Theatre"
+        ]
+    },
+        {
+          "roomType": "Economy",
+          "price": 75,
+          "availabilityStatus": true,
+          "specifications": [
+            "👥 Up to 1 person",
+            "📏15 sq. m.",
+            "🚪1 room"
+          ],
+          "description": "A budget-friendly room with essential amenities, perfect for solo travelers.",
+          "images": [
+            "uploads/images/room9_image1.jpg",
+            "uploads/images/room9_image2.jpg"
+          ],
+          "features": [
+            "Wi-Fi",
+            "TV"
+          ]
+        },
+        {
+          "roomType": "Superior",
+          "price": 180,
+          "availabilityStatus": true,
+          "specifications": [
+            "👥 Up to 2 people",
+            "📏30 sq. m.",
+            "🚪1 room"
+          ],
+          "description": "A superior room with more space and premium amenities like a mini-fridge and balcony.",
+          "images": [
+            "uploads/images/room10_image1.jpg",
+            "uploads/images/room10_image2.jpg"
+          ],
+          "features": [
+            "Wi-Fi",
+            "TV",
+            "Mini Fridge",
+            "Balcony"
+          ]
+        },
+        {
+          "roomType": "Penthouse",
+          "price": 1000,
+          "availabilityStatus": false,
+          "specifications": [
+            "👥 Up to 4 people",
+            "📏150 sq. m.",
+            "🚪2 rooms"
+          ],
+          "description": "A luxurious penthouse with a private pool, stunning city view, and high-end facilities.",
+          "images": [
+            "uploads/images/room11_image1.jpg",
+            "uploads/images/room11_image2.jpg"
+          ],
+          "features": [
+            "Wi-Fi",
+            "TV",
+            "Private Pool",
+            "Jacuzzi",
+            "Balcony"
+          ]
+        },
+        {
+          "roomType": "Studio",
+          "price": 220,
+          "availabilityStatus": true,
+          "specifications": [
+            "👥 Up to 2 people",
+            "📏40 sq. m.",
+            "🚪1 room"
+          ],
+          "description": "An open-concept studio room with a modern design and fully-equipped kitchenette.",
+          "images": [
+            "uploads/images/room12_image1.jpg",
+            "uploads/images/room12_image2.jpg"
+          ],
+          "features": [
+            "Wi-Fi",
+            "TV",
+            "Mini Fridge",
+            "Kitchenette"
+          ]
+        },
+        {
+          "roomType": "Presidential Suite",
+          "price": 2000,
+          "availabilityStatus": true,
+          "specifications": [
+            "👥 Up to 4 people",
+            "📏300 sq. m.",
+            "🚪4 rooms"
+          ],
+          "description": "An extravagant suite with multiple bedrooms, a private spa, and a full-time butler.",
+          "images": [
+            "uploads/images/room13_image1.jpg",
+            "uploads/images/room13_image2.jpg"
+          ],
+          "features": [
+            "Wi-Fi",
+            "TV",
+            "Private Spa",
+            "Balcony",
+            "Butler Service"
+          ]
+        },
+        {
+          "roomType": "Loft",
+          "price": 350,
+          "availabilityStatus": false,
+          "specifications": [
+            "👥 Up to 3 people",
+            "📏55 sq. m.",
+            "🚪1 room"
+          ],
+          "description": "A stylish loft with high ceilings, modern furniture, and an open-plan living area.",
+          "images": [
+            "uploads/images/room14_image1.jpg",
+            "uploads/images/room14_image2.jpg"
+          ],
+          "features": [
+            "Wi-Fi",
+            "TV",
+            "Mini Fridge",
+            "Living Area"
+          ]
+        },
+        {
+          "roomType": "Villa",
+          "price": 1500,
+          "availabilityStatus": true,
+          "specifications": [
+            "👥 Up to 6 people",
+            "📏200 sq. m.",
+            "🚪3 rooms"
+          ],
+          "description": "A private villa with a pool, garden, and full kitchen, perfect for large groups or families.",
+          "images": [
+            "uploads/images/room15_image1.jpg",
+            "uploads/images/room15_image2.jpg"
+          ],
+          "features": [
+            "Wi-Fi",
+            "TV",
+            "Private Pool",
+            "Full Kitchen",
+            "Garden"
+          ]
+        },
+        {
+          "roomType": "Beachfront Suite",
+          "price": 800,
+          "availabilityStatus": true,
+          "specifications": [
+            "👥 Up to 2 people",
+            "📏80 sq. m.",
+            "🚪1 room"
+          ],
+          "description": "A stunning suite with a beach view, private balcony, and all the luxury amenities you can imagine.",
+          "images": [
+            "uploads/images/room16_image1.jpg",
+            "uploads/images/room16_image2.jpg"
+          ],
+          "features": [
+            "Wi-Fi",
+            "TV",
+            "Balcony",
+            "Beach View",
+            "Mini Fridge"
+          ]
+        }
+      
+      
+]
