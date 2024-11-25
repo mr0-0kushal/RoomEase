@@ -46,6 +46,8 @@ import img45 from '../Galleryimg/img45.webp';
 import img46 from '../Galleryimg/img46.webp';
 import img47 from '../Galleryimg/img47.webp';
 
+export {img1 , img2 , img3 , img4};
+
 const images = [
     img1,
     img2,

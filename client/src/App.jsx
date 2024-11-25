@@ -8,6 +8,7 @@ import SignUpForm from './components/login and signup/signup';
 import LoginForm from './components/login and signup/login';
 import Home from './pages/HomePage';
 import Layout from './pages/Layout';
+import MyStay from './components/MyStay/MyStayPage'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="rooms" element={<RoomCardList />} />
           <Route path="signup" element={<SignUpForm />} />
           <Route path="login" element={<LoginForm />} />
+          <Route path="mystay" element={<MyStay/>}/>
         </Route>
       </Routes>
     </Router>
