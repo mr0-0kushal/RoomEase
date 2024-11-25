@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Button, TextField, Typography, IconButton, InputAdornment, FormControl, FormControlLabel, Radio, RadioGroup, CircularProgress, Container, styled } from "@mui/material";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const StyledContainer = styled(Container)(({ theme }) => ({
   minHeight: "100vh",
@@ -176,11 +177,23 @@ const SignUpForm = () => {
         </FormControl>
 
         
-    
-        <div>
-            <p className="text-[#7e7e7e]">New User? <a href="" className="text-black hover:underline">Click here to Login in</a></p>
-        </div>
-
+        <Box sx={{ mt: 2, textAlign: "center" }}>
+         
+         Already user?
+         <Link
+           to='/login'
+           underline="hover"
+           sx={{
+             cursor: "pointer",
+             color: "#FE6B8B",
+             "&:hover": {
+               color: "#FF8E53"
+             }
+           }}
+         >
+           Click here to Log in
+         </Link>
+     </Box>
         <Button
           type="submit"
           fullWidth
