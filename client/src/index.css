@@ -2,108 +2,144 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .imageC {
-    position: relative;
+  position: relative;
 }
- 
+
 .imgC .tint {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.47);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.47);
 }
-.imgC .bgk{
-    position: absolute;
-    z-index: -2;
-    top: 0;
-    left: 0;
-    display: flex;
-    /* Optional: for centering */
-    justify-content: center;
-    align-items: center;
+.imgC .bgk {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  display: flex;
+  /* Optional: for centering */
+  justify-content: center;
+  align-items: center;
 }
 
 /* Navbar CSS */
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1; 
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .h1-animation {
-    animation: fadeIn 0.7s ease-in-out backwards;      
+  animation: fadeIn 0.7s ease-in-out backwards;
 }
 
-
-/* Navbar MINI CSS */ 
+/* Navbar MINI CSS */
 .opt {
-    padding: 15px;
-    background-color: rgba(130, 178, 255, 0.838);
-    border-radius: 20px;
-    flex-direction: column;
-  }
-  .opt .opts {
-    display: block;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 10px;
-    text-align: center;
-    color: #4E54C8;
-    background-color: antiquewhite;
-    border-radius: 80px;
-    font-weight: bolder;
-    cursor: pointer;
-    transition: 400ms;  
-  }
-  
-  .opt .opts p.tip {
-    font-size: 1em;
-    font-weight: 700;
-  }
-  
-  .opt .opts p.second-text {
-    font-size: .7em;
-  }
-  
-  .opt .opts:hover {
-    transform: scale(1.1, 1.1);
-  }
-  
-  .opt:hover > .opts:not(:hover) {
-    filter: blur(10px);
-    transform: scale(0.9, 0.9);
-  }
+  padding: 15px;
+  background-color: rgba(130, 178, 255, 0.838);
+  border-radius: 20px;
+  flex-direction: column;
+}
+.opt .opts {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #4e54c8;
+  background-color: antiquewhite;
+  border-radius: 80px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 400ms;
+}
 
-  .hero .background{
-    position: absolute;
-    z-index: -2;
-    top: -200px;
-    left: 0;
-    /* Optional: for centering */
-    justify-content: center;
-    align-items: center;
-  }
+.opt .opts p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
 
-  .herobtn {
-    background-color: rgba(222, 184, 135, 0.589);
-  }
-  .herobtn:hover , .fbtn:hover {
-    transform: scale(1.05);
-  }
-  .feature .background{
-    position: absolute;
-    z-index: -2;
-    top: -200px;
-    left: 0;
-    /* Optional: for centering */
-    justify-content: center;
-    align-items: center;
-  }
+.opt .opts p.second-text {
+  font-size: 0.7em;
+}
+
+.opt .opts:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.opt:hover > .opts:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
+}
+
+.hero .background {
+  position: absolute;
+  z-index: -2;
+  top: -200px;
+  left: 0;
+  /* Optional: for centering */
+  justify-content: center;
+  align-items: center;
+}
+
+.herobtn {
+  background-color: rgba(222, 184, 135, 0.589);
+}
+.herobtn:hover,
+.fbtn:hover {
+  transform: scale(1.05);
+}
+.feature .background {
+  position: absolute;
+  z-index: -2;
+  top: -200px;
+  left: 0;
+  /* Optional: for centering */
+  justify-content: center;
+  align-items: center;
+}
+.testi .background {
+  position: absolute;
+  z-index: -2;
+  top: -180px;
+  left: 0;
+  /* Optional: for centering */
+  justify-content: center;
+  align-items: center;
+}
+.testi .tint {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.gallery .background {
+  position: absolute;
+  z-index: -2;
+  top: -200px;
+  left: 0;
+  /* Optional: for centering */
+  justify-content: center;
+  align-items: center;
+}
+.gallery .tint {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}

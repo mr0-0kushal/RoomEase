@@ -5,16 +5,16 @@ import logo from '../../assets/LogoWName.svg'
 
 const Footer = () => {
     return (
-        <div className='py-5 px-10 bg-[#1A1117] text-white flex flex-col items-center justify-center'>
-            <div className='flex justify-start items-center w-full gap-10'>
+        <div className='flex flex-col justify-center items-center bg-[#1A1117] px-10 py-5 w-full text-white'>
+            <div className='flex justify-start items-center gap-10 w-full'>
                 <img src={logo} height={100} width={100} alt="" />
-                <div classname="grid grid-cols-2 grid-rows-3 gap-2 items-center justify-evenly">
-                    <Link to={'/about'}>About Us</Link>
-                    <Link to={'/about'}>About Us</Link>
-                    <Link to={'/about'}>About Us</Link>
-                    <Link to={'/about'}>About Us</Link>
-                    <Link to={'/about'}>About Us</Link>
-                    <Link to={'/about'}>About Us</Link>
+                <div classname="flex gap-10 items-center justify-center w-full">
+                    <Link to={'/'}>About Us</Link>
+                    <Link to={'/contact'}>Contact Us</Link>
+                    <Link to={'/gallery'}>Gallery</Link>
+                    <Link to={'/about'}></Link>
+                    <Link to={'/about'}></Link>
+                    <Link to={'/about'}></Link>
                 </div>
             </div>
             <div class="flex justify-evenly items-center w-[70%]">

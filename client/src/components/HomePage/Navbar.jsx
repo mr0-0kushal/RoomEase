@@ -65,11 +65,11 @@ const Navbar = () => {
     };
 
     return (
-        <div className='flex items-center gap-10 justify-center text-white z-2'>
+        <div className='z-2 flex justify-center items-center gap-10 text-white'>
             {items.map((item, index) => (
-                <div key={index} className='flex items-center justify-center font-bold text-center'>
+                <div key={index} className='flex justify-center items-center font-bold text-center'>
                     <h1
-                        className="absolute text-lg opacity-0"
+                        className="absolute opacity-0 text-lg"
                         ref={(el) => {
                             navItem.current[index] = el;
                         }}
@@ -80,19 +80,20 @@ const Navbar = () => {
                         to={item.link}
                         onMouseEnter={() => handleMouseEnter(index)}
                         onMouseLeave={() => handleMouseLeave(index)}
-                        className='h-[3em] w-[3.5em] z-20 relative h1-animation'>
+                        className='relative z-20 w-[3.5em] h-[3em] h1-animation'>
                         <svg
                             viewBox={item.view}
                             fill="currentColor"
                             height="2.5em"
                             width="2em"
-                            className='absolute -z-1 svg-animation'
+                            className='-z-1 absolute svg-animation'
                             ref={(el) => {
                                 navIcon.current[index] = el;
                             }}
                         >
+                            <path d={item.dPath1} />
                             <path d={item.dPath} />
-                        </svg>
+                        </svg> 
                     </Link>
                 </div>
             ))}
