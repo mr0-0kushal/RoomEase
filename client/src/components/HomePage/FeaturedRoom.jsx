@@ -2,6 +2,7 @@ import React from 'react';
 import first from '../../assets/Galleryimg/img3.webp'
 import feature from '../../assets/images/Feature.png'
 import { FaLocationArrow } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 function FeaturedRooms() {
   const rooms = [
@@ -47,10 +48,10 @@ function FeaturedRooms() {
             </div>
           ))}
         </div>
-        <div className="text-white justify-center font-bold py-2 px-4 text-2xl mt-8 flex gap-2 items-center rounded-3xl bg-[#101008a1] fbtn transition-all duration-150"><span>View More</span><span><FaLocationArrow /></span></div>
+        <Link to={'/rooms'} className="text-white justify-center font-bold py-2 px-4 text-2xl mt-8 flex gap-2 items-center rounded-3xl bg-[#101008a1] fbtn transition-all duration-150"><span>View More</span><span><FaLocationArrow /></span></Link>
       </div>
     </section>
   );
 }
-
+ 
 export default FeaturedRooms;
