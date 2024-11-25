@@ -20,30 +20,38 @@ function Testimonials() {
       image: 'user1.jpg',
       testimonial: "Our family vacation here was incredible! The kids loved the activities at the kids' club, and we appreciated the spacious suites with thoughtful amenities. The staff went above and beyond to ensure our trip was stress-free. This hotel truly feels like a home away from home.",
       rating: 5,
+
+    },
+    {
+      name: 'Abha Sharma',
+      image: 'user1.jpg',
+      testimonial: "Our family vacation here was incredible! The kids loved the activities at the kids' club, and we appreciated the spacious suites with thoughtful amenities. The staff went above and beyond to ensure our trip was stress-free. This hotel truly feels like a home away from home.",
+      rating: 5,
+      
     },
   ];
 
   return (
-    <section className="py-10 px-8 w-full h-[110vh] testi relative overflow-hidden flex flex-col gap-8 items-center text-white">
+    <section className="relative flex flex-col items-center gap-8 px-8 py-10 w-full h-[110vh] text-white overflow-hidden testi">
       <img src={Testi} className='background' />
       <div className='tint'/>
-      <div className="flex flex-col items-center justify-center">
-        <h2 className="text-3xl font-bold text-center mb-10">What Our Guests Say</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="flex flex-col justify-center items-center">
+        <h2 className="mb-10 font-bold text-3xl text-center">What Our Guests Say</h2>
+        <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {testimonials.map((testimonial,index) => (
-            <div key={index} className="bg-[#618a449a] rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-500 p-6">
-              <div className="flex flex-col items-center mb-4 gap-4 justify-center">
-                <img src={testimonial.image} alt={testimonial.name} className="w-[200px] h-[200px] rounded-full items-center" />
-                <div className="flex flex-col items-center justify-center gap-6">
-                  <h3 className="text-xl font-bold">{testimonial.name}</h3>
-                  <div className="flex items-center justify-center ">
+            <div key={index} className="bg-[#618a449a] hover:shadow-lg rounded-xl hover:scale-105 p-6 transition-all duration-500">
+              <div className="flex flex-col justify-center items-center gap-4 mb-4">
+                <img src={testimonial.image} alt={testimonial.name} className="items-center rounded-full w-[200px] h-[200px]" />
+                <div className="flex flex-col justify-center items-center gap-6">
+                  <h3 className="font-bold text-xl">{testimonial.name}</h3>
+                  <div className="flex justify-center items-center">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <i key={i} className="fa fa-star text-yellow-400"></i>
+                      <i key={i} className="text-yellow-400 fa fa-star"></i>
                     ))}
                   </div>
                 </div>
               </div>
-              <p className="text-center font-thin"><i>{testimonial.testimonial}</i></p>
+              <p className="font-thin text-center"><i>{testimonial.testimonial}</i></p>
             </div>
           ))}
         </div>

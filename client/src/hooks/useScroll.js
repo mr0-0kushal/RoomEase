@@ -1,18 +1,24 @@
 import { useEffect, useState } from 'react';
 
-export const useScrollPosition = () => {
+export const useScrollPosition = (scrollableRef) => {
     const [scrollPosition, setScrollPosition] = useState(0);
 
     useEffect(() => {
         const updatePosition = () => {
-            setScrollPosition(window.pageYOffset);
+            if (scrollableRef?.current) {
+                setScrollPosition(scrollableRef.current.scrollTop);
+            } else {
+                setScrollPosition(window.scrollY);
+            }
         };
 
-        window.addEventListener('scroll', updatePosition);
+        const target = scrollableRef?.current || window;
+
+        target.addEventListener('scroll', updatePosition);
         updatePosition(); // Call it once to set initial position
 
-        return () => window.removeEventListener('scroll', updatePosition);
-    }, []);
+        return () => target.removeEventListener('scroll', updatePosition);
+    }, [scrollableRef]);
 
     return scrollPosition;
 };

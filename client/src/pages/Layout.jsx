@@ -34,9 +34,9 @@ const Layout = () => {
                 <img src={isMobile ? Logo : LogoWName} width={isMobile ? "50px" : "70px"} alt="Logo" />
                 {isMobile ? <NavbarMini /> : <Navbar />}
             </div>
-            <main className="">
-                <Outlet />
-            </main  >
+            <main className="my-20">
+                <Outlet   />
+            </main>
             <footer>
                 <Footer />
             </footer>

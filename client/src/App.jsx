@@ -12,6 +12,7 @@ import CheckoutPage from './components/order/paymentform';
 
 
 
+import MyStay from './components/MyStay/MyStayPage'
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="rooms" element={<RoomCardList />} />
           <Route path="signup" element={<SignUpForm />} />
           <Route path="login" element={<LoginForm />} />
+          <Route path="mystay" element={<MyStay/>}/>
         </Route>
       </Routes>
     </Router>
