@@ -32,7 +32,7 @@ function Testimonials() {
   ];
 
   return (
-    <section className="relative flex flex-col items-center gap-8 px-8 py-10 w-full h-[110vh] text-white overflow-hidden testi">
+    <section className="relative flex flex-col items-center gap-8 px-8 py-10 w-full h-[80vh] text-white overflow-hidden testi">
       <img src={Testi} className='background' />
       <div className='tint'/>
       <div className="flex flex-col justify-center items-center">
@@ -41,7 +41,6 @@ function Testimonials() {
           {testimonials.map((testimonial,index) => (
             <div key={index} className="bg-[#618a449a] hover:shadow-lg rounded-xl hover:scale-105 p-6 transition-all duration-500">
               <div className="flex flex-col justify-center items-center gap-4 mb-4">
-                <img src={testimonial.image} alt={testimonial.name} className="items-center rounded-full w-[200px] h-[200px]" />
                 <div className="flex flex-col justify-center items-center gap-6">
                   <h3 className="font-bold text-xl">{testimonial.name}</h3>
                   <div className="flex justify-center items-center">
