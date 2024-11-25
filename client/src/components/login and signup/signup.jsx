@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Button, TextField, Typography, IconButton, InputAdornment, FormControl, FormControlLabel, Radio, RadioGroup, CircularProgress, Container, styled } from "@mui/material";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import axios from "axios"; // Importing Axios
 
 const StyledContainer = styled(Container)(({ theme }) => ({
   minHeight: "100vh",
@@ -51,6 +52,7 @@ const SignUpForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [emailSuggestions, setEmailSuggestions] = useState([]);
+  const [message, setMessage] = useState("");
 
   const validateField = (name, value) => {
     switch (name) {
@@ -90,12 +92,16 @@ const SignUpForm = () => {
 
     if (Object.keys(newErrors).length === 0) {
       setIsLoading(true);
+      setMessage(""); // Reset message before sending request
       try {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        console.log("Form submitted:", formData);
+        const response = await axios.post("http://localhost:8000/api/user/signup", formData);
+        setMessage(response.data.message); // Display success message
       } catch (error) {
-        console.error("Submission error:", error);
+        if (error.response) {
+          setMessage(error.response.data.message || "Error during signup"); // Show error message
+        } else {
+          setMessage("Error connecting to the server!");
+        }
       } finally {
         setIsLoading(false);
       }
@@ -175,8 +181,6 @@ const SignUpForm = () => {
           </RadioGroup>
         </FormControl>
 
-        
-    
         <div>
             <p className="text-[#7e7e7e]">New User? <a href="" className="text-black hover:underline">Click here to Login in</a></p>
         </div>
@@ -196,7 +200,13 @@ const SignUpForm = () => {
         >
           {isLoading ? <CircularProgress size={24} color="inherit" /> : "Create Account"}
         </Button>
-        
+
+        {/* Message display */}
+        {message && (
+          <Typography variant="body2" color={message.includes("Error") ? "error" : "success"} align="center" sx={{ mt: 2 }}>
+            {message}
+          </Typography>
+        )}
       </FormWrapper>
     </StyledContainer>
   );

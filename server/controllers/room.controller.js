@@ -48,4 +48,27 @@ console.log(featuresArray);
   }
 };
 
-export { createRoom };
+
+
+const getRooms = async (req, res) => {
+  try {
+    // Fetch all rooms from the database
+    const rooms = await Room.find();
+
+    if (!rooms || rooms.length === 0) {
+      return res.status(404).json({ message: "No rooms available" });
+    }
+
+    // Return rooms data to the frontend
+    res.status(200).json({ rooms });
+  } catch (error) {
+    console.error("Error fetching rooms:", error);
+    res.status(500).json({ error: "Failed to fetch rooms" });
+  }
+};
+
+// Example: Route for fetching rooms
+
+
+
+export { createRoom , getRooms};

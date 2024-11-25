@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/mr0-0kushal/RoomEase#readme",
   "dependencies": {
+    "@stripe/stripe-js": "^5.2.0",
     "bcrypt": "^5.1.1",
     "cloudinary": "^2.5.1",
     "crypto": "^1.0.1",
@@ -29,6 +30,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.8.2",
     "multer": "^1.4.5-lts.1",
-    "nodemailer": "^6.9.16"
+    "nodemailer": "^6.9.16",
+    "stripe": "^17.4.0"
   }
 }

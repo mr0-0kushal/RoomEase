@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { Box, Button, TextField, Typography, IconButton, InputAdornment, CircularProgress, Container, styled } from "@mui/material";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Box, Button, TextField, Typography, CircularProgress, Container, styled } from "@mui/material";
 import { Link } from "react-router-dom";
-
 
 const StyledContainer = styled(Container)(({ theme }) => ({
   minHeight: "100vh",
@@ -45,7 +43,6 @@ const LoginForm = () => {
   });
 
   const [errors, setErrors] = useState({});
-  const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const validateField = (name, value) => {
@@ -77,9 +74,14 @@ const LoginForm = () => {
     if (Object.keys(newErrors).length === 0) {
       setIsLoading(true);
       try {
-        // Simulate API call
+        // Simulate API call (replace with actual API request)
         await new Promise(resolve => setTimeout(resolve, 2000));
         console.log("Form submitted:", formData);
+
+        // Example: Call API for login here
+        // const response = await axios.post("/login", formData);
+        // If successful, handle success (e.g., redirect or store JWT)
+
       } catch (error) {
         console.error("Submission error:", error);
       } finally {
@@ -108,7 +110,17 @@ const LoginForm = () => {
           aria-label="Enter your email"
         />
 
-  
+        <StyledTextField
+          fullWidth
+          label="Password"
+          name="password"
+          type="password"
+          value={formData.password}
+          onChange={handleChange}
+          error={!!errors.password}
+          helperText={errors.password}
+          aria-label="Enter your password"
+        />
 
         <Button
           type="submit"
@@ -127,21 +139,20 @@ const LoginForm = () => {
         </Button>
 
         <Box sx={{ mt: 2, textAlign: "center" }}>
-         
-            New user?
-            <Link
-              to='/signup'
-              underline="hover"
-              sx={{
-                cursor: "pointer",
-                color: "#FE6B8B",
-                "&:hover": {
-                  color: "#FF8E53"
-                }
-              }}
-            >
-              Click here to sign up
-            </Link>
+          New user?
+          <Link
+            to='/signup'
+            underline="hover"
+            sx={{
+              cursor: "pointer",
+              color: "#FE6B8B",
+              "&:hover": {
+                color: "#FF8E53"
+              }
+            }}
+          >
+            Click here to sign up
+          </Link>
         </Box>
       </FormWrapper>
     </StyledContainer>
