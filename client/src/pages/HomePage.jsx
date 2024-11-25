@@ -6,7 +6,6 @@ import FeaturedRooms from '../components/HomePage/FeaturedRoom';
 import Testimonials from '../components/HomePage/Testimonials';
 import GallerySec from '../components/HomePage/GallerySec';
 
-
 const HomePage = () => {
   return (
     <div className='flex flex-col overflow-hidden'>
