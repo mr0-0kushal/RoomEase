@@ -36,8 +36,6 @@ const createUser = async (req, res) => {
 };
 
 
-
-
 let otpStore = {}; // In-memory storage for OTPs (Can be replaced with a database)
 
 const sendOtpToEmail = async (req, res) => {
@@ -56,8 +54,6 @@ const sendOtpToEmail = async (req, res) => {
     message: 'OTP sent to your email.',
   });
 };
-
-
 
 // controllers/authController.js (Add to existing file)
 const verifyOtp = async (req, res) => {

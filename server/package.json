@@ -23,6 +23,7 @@
     "crypto": "^1.0.1",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
+    "emailjs": "^4.0.3",
     "express": "^4.21.1",
     "express-session": "^1.18.1",
     "jsonwebtoken": "^9.0.2",
