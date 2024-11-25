@@ -1,6 +1,8 @@
 import React from 'react';
-import first from '../../assets/Galleryimg/img3.webp'
-import feature from '../../assets/images/Feature.png'
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import first from '../../assets/Galleryimg/img3.webp';
+import feature from '../../assets/images/Feature.png';
 import { FaLocationArrow } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
@@ -27,31 +29,102 @@ function FeaturedRooms() {
       description: 'Spacious and luxurious room with a king-size bed.',
       price: '₹15,000',
     },
-
   ];
 
+  // Set up Intersection Observer
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
+  // Animation Variants
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 }, // Start off-screen
+    visible: { opacity: 1, y: 0 },  // Fully visible
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1 },
+  };
+
   return (
-    <section className="feature py-10 relative overflow-hidden">
-      <img src={feature} alt="" className='background'/>
-      <div className="flex flex-col items-center justify-center gap-5">
-        <h2 className="text-4xl font-bold text-center mb-6 text-white ">Featured Rooms</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24 items-center justify-center">
-          {rooms.map(room => (
-            <div key={room.id} className="rounded-xl h-[65vh] w-[50vh] relative overflow-hidden flex flex-col items-center justify-end">
-              <img src={room.image} alt={room.title} className="w-full h-full object-cover absolut" />
-              <div className='flex flex-col z-1 absolute bottom-[-180px] hover:bottom-[0] text-white bg-[#49372d69] px-3 pt-4 pb-5 transition-all duration-200'>
-                <h3 className="text-xl font-bold mb-6 text-center ">{room.title}</h3>
-                <p className="">{room.description}</p>
-                <p className="text-2xl font-bold text-[#e7bda6] mt-4">Starting from {room.price}</p>
-                <button className="bg-[#e7bda6] text-[#49372d] hover:bg-[#49372d] hover:text-white font-bold py-2 px-4 rounded mt-4">Book Now</button>
+    <motion.section
+      ref={ref}
+      className="relative py-10 overflow-hidden feature"
+      variants={sectionVariants}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
+      {/* Static Background */}
+      <img src={feature} alt="" className="background" />
+
+      {/* Section Content */}
+      <motion.div
+        className="flex flex-col justify-center items-center gap-5"
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={sectionVariants}
+      >
+        {/* Title */}
+        <motion.h2
+          className="mb-6 font-bold text-4xl text-center text-white"
+          transition={{ delay: 0.2 }}
+        >
+          Featured Rooms
+        </motion.h2>
+
+        {/* Room Cards */}
+        <div className="justify-center items-center gap-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {rooms.map((room, index) => (
+            <motion.div
+              key={room.id}
+              className="relative flex flex-col justify-end items-center rounded-xl w-[50vh] h-[65vh] overflow-hidden"
+              variants={cardVariants}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              transition={{ duration: 0.5, delay: index * 0.2, ease: "easeOut" }}
+            >
+              <img
+                src={room.image}
+                alt={room.title}
+                className="absolute w-full h-full object-cover"
+              />
+              <div className="bottom-[-180px] hover:bottom-[0] z-1 absolute flex flex-col bg-[#49372d69] px-3 pt-4 pb-5 text-white transition-all duration-200">
+                <h3 className="mb-6 font-bold text-center text-xl">
+                  {room.title}
+                </h3>
+                <p>{room.description}</p>
+                <p className="mt-4 font-bold text-[#e7bda6] text-2xl">
+                  Starting from {room.price}
+                </p>
+                <button className="bg-[#e7bda6] hover:bg-[#49372d] mt-4 px-4 py-2 rounded font-bold text-[#49372d] hover:text-white">
+                  Book Now
+                </button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-        <Link to={'/rooms'} className="text-white justify-center font-bold py-2 px-4 text-2xl mt-8 flex gap-2 items-center rounded-3xl bg-[#101008a1] fbtn transition-all duration-150"><span>View More</span><span><FaLocationArrow /></span></Link>
-      </div>
-    </section>
+
+        {/* View More Button */}
+        <motion.div
+          className="mt-8"
+          variants={cardVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          <Link
+            to="/rooms"
+            className="flex justify-center items-center gap-2 bg-[#101008a1] px-4 py-2 rounded-3xl font-bold text-2xl text-white transition-all duration-150 fbtn"
+          >
+            <span>View More</span>
+            <span>
+              <FaLocationArrow />
+            </span>
+          </Link>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 }
- 
+
 export default FeaturedRooms;

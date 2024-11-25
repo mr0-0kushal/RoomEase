@@ -90,9 +90,6 @@
   align-items: center;
 }
 
-.herobtn {
-  background-color: rgba(222, 184, 135, 0.589);
-}
 .herobtn:hover,
 .fbtn:hover {
   transform: scale(1.05);

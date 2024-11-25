@@ -16,10 +16,11 @@
     left: 0;
     display: block;
     border-radius: 50px;
-    background-color: rgba(222, 184, 135, 0.589);
+    background-color: rgb(190, 141, 77);
     width: 55px;
     height: 55px;
     transition: all 0.3s ease;
+    color: black;
   }
   
   .cta span {
@@ -28,7 +29,7 @@
     font-size: 25px;
     font-weight: 700;
     letter-spacing: 0.05em;
-    color: white;
+    color: black;
   }
   
   .cta .svg {
@@ -46,7 +47,7 @@
   
   .cta:hover:before {
     width: 100%;
-    background-color: rgba(222, 184, 135, 0.589);;
+    background-color: rgb(190, 141, 77);
   }
   
   .cta:hover svg {

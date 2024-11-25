@@ -8,17 +8,12 @@ import SignUpForm from './components/login and signup/signup';
 import LoginForm from './components/login and signup/login';
 import Home from './pages/HomePage';
 import Layout from './pages/Layout';
-import CheckoutPage from './components/order/paymentform';
-
-
-
 import MyStay from './components/MyStay/MyStayPage'
 
 const App = () => {
   return (
     <Router>
       <Routes>
-          <Route path="payment" element={<CheckoutPage />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           {/* <Route path="room" element={<RoomCard />} /> */}
@@ -27,7 +22,7 @@ const App = () => {
           <Route path="rooms" element={<RoomCardList />} />
           <Route path="signup" element={<SignUpForm />} />
           <Route path="login" element={<LoginForm />} />
-          <Route path="mystay" element={<MyStay/>}/>
+          <Route path="mystay" element={<MyStay />} />
         </Route>
       </Routes>
     </Router>

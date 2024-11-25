@@ -4,11 +4,11 @@ import roomcarddata from "../../assets/data/roomcard.json"; // Path to roomcard.
 
 const RoomCardList = () => {
   return (
-    <div className="flex flex-row flex-wrap gap-6 w-[100%] justify-start">
-  {roomcarddata.map((room) => (
-    <div className="w-full mx-10">
+    <div className="flex flex-row flex-wrap justify-start gap-6 w-[100%]">
+  {roomcarddata.map((room ,index) => (
+    <div className="mx-10 w-full">
     <RoomCard
-      key={room.id}
+      key={index}
       roomType={room.roomType}
       price={room.price}
       specifications={room.specifications}

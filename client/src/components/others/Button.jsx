@@ -4,7 +4,7 @@ import { FaLocationArrow } from "react-icons/fa";
 
 const Button = ({title}) => {
     return (
-        <button className="cta flex items-center w-auto">
+        <button className="flex items-center w-auto cta">
             <span>{title}</span>
             <FaLocationArrow className='svg'/>
         </button>

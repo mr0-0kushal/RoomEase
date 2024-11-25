@@ -30,7 +30,7 @@ const Layout = () => {
   const scrollPosition = useScrollPosition();
     return (
         <div className="min-w-screen min-h-screen">
-            <div className={`header flex items-center justify-between rounded-b-xl z-10 px-4 py-3 md:px-10 md:py-3 fixed z-2 w-full overflow-hidden top-0 transition-all duration-500 ${scrollPosition > 0 ? 'bg-[#29171cd0] shadow-lg' : 'bg-transparent'}`} >
+            <div className={`header flex items-center justify-between rounded-b-xl z-20 px-4 py-3 md:px-10 md:py-3 fixed z-2 w-full overflow-hidden top-0 transition-all duration-500 ${scrollPosition > 0 ? 'bg-[#29171cd0] shadow-lg' : 'bg-transparent'}`} >
                 <img src={isMobile ? Logo : LogoWName} width={isMobile ? "50px" : "70px"} alt="Logo" />
                 {isMobile ? <NavbarMini /> : <Navbar />}
             </div>
