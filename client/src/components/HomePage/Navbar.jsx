@@ -69,7 +69,7 @@ const Navbar = () => {
             {items.map((item, index) => (
                 <div key={index} className='flex items-center justify-center font-bold text-center'>
                     <h1
-                        className="absolute text-lg opacity-0"
+                        className="absolute text-lg  opacity-0"
                         ref={(el) => {
                             navItem.current[index] = el;
                         }}
