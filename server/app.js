@@ -21,8 +21,10 @@ app.set('views', './views'); // Set the views directory
 // Routes
 // import userRouter from './routers/user.routes.js'
 import adminRouter from './routes/admin.routes.js'
+import userRouter from './routes/user.router.js';
 
 app.use('/api/admin', adminRouter)
+app.use('/api/user' , userRouter)
 
 // app.use('/api', userRouter)
 

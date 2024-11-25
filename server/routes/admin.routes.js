@@ -12,6 +12,9 @@ router.post('/signup', adminSignup); // Signup route
 router.post('/login', adminLogin);   // Login route
 router.post('/create',  upload.array('images', 5) , createRoom);
 
+//new 
+
+
 
 const adminRouter = router
 export default adminRouter

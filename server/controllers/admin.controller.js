@@ -29,8 +29,6 @@ const adminSignup = async (req, res) => {
   }
 };
 
-
-
 // Login Endpoint
 const adminLogin = async (req, res) => {
   try {
