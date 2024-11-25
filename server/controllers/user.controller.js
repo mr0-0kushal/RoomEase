@@ -1,78 +1,67 @@
 
-
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 // controllers/userController.js
 import User from '../models/user.model.js'
-// controllers/authController.js
-import generateOtp from '../utils/generateOtp.js'
-import sendOtp from '../utils/sendOtp.js'
-// Function to store user details
-const createUser = async (req, res) => {
+
+const signup = async (req, res) => {
   try {
-    const { name, email, phone, gender } = req.body;
+    const { name, email, phone, gender, password } = req.body;
+    console.log(1)
 
-    // Create a new user instance
-    const newUser = new User({
-      name,
-      email,
-      phone,
-      gender,
-    });
+    // Check if user already exists
+    const existingUser = await User.findOne({ email });
+    console.log(1)
+    if (existingUser) {
+      return res.status(400).json({ message: 'User already exists with this email!' });
+    }
+    console.log(1)
 
-    // Save the user to the database
+    // Create a new user
+    const newUser = new User({ name, email, phone, gender, password });
     await newUser.save();
+    console.log(4)
 
-    res.status(201).json({
-      message: 'User created successfully',
-      user: newUser,
-    });
+    res.status(201).json({ message: 'User registered successfully!' });
   } catch (error) {
-    console.error('Error creating user:', error);
-    res.status(500).json({
-      message: 'Server error',
-      error: error.message,
-    });
+    console.error('Error during signup:', error);
+    res.status(500).json({ message: 'Internal server error.' });
   }
 };
 
 
-let otpStore = {}; // In-memory storage for OTPs (Can be replaced with a database)
 
-const sendOtpToEmail = async (req, res) => {
-  const { email } = req.body;
 
-  // Generate OTP
-  const otp = generateOtp();
 
-  // Store OTP in-memory (you could use a database or cache for production)
-  otpStore[email] = otp;
 
-  // Send OTP to the user's email
-  sendOtp(email, otp);
+const SECRET_KEY = process.env.ACCESS_TOKEN_SECRET; // Use a strong secret key in production
 
-  res.status(200).json({
-    message: 'OTP sent to your email.',
-  });
-};
+ const login = async (req, res) => {
+  try {
+    const { email, password } = req.body;
 
-// controllers/authController.js (Add to existing file)
-const verifyOtp = async (req, res) => {
-  const { email, otp } = req.body;
+    // Check if user exists
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ message: 'User not found!' });
+    }
 
-  // Check if the OTP is valid
-  if (otpStore[email] && otpStore[email] === otp) {
-    // OTP is correct, proceed with login (you can add JWT token generation or session logic here)
-    delete otpStore[email]; // Clear OTP after verification
+    // Verify the password
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+    if (!isPasswordValid) {
+      return res.status(401).json({ message: 'Invalid credentials!' });
+    }
 
-    res.status(200).json({
-      message: 'OTP verified successfully. Login granted!',
-    });
-  } else {
-    res.status(400).json({
-      message: 'Invalid OTP or OTP expired.',
-    });
+    // Generate a JWT token
+    const token = jwt.sign({ id: user._id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: process.env.ACCESS_TOKEN_EXPIRY });
+
+    res.status(200).json({ message: 'Login successful!', token });
+  } catch (error) {
+    console.error('Error during login:', error);
+    res.status(500).json({ message: 'Internal server error.' });
   }
 };
 
 
-export {createUser , sendOtpToEmail , verifyOtp}
+export {signup , login }
