@@ -8,11 +8,16 @@ import SignUpForm from './components/login and signup/signup';
 import LoginForm from './components/login and signup/login';
 import Home from './pages/HomePage';
 import Layout from './pages/Layout';
+import CheckoutPage from './components/order/paymentform';
+
+
+
 
 const App = () => {
   return (
     <Router>
       <Routes>
+          <Route path="payment" element={<CheckoutPage />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           {/* <Route path="room" element={<RoomCard />} /> */}
