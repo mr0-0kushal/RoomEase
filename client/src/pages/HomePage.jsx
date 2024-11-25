@@ -12,7 +12,6 @@ import FeaturedRooms from '../components/HomePage/FeaturedRoom';
 import Testimonials from '../components/HomePage/Testimonials';
 import GallerySec from '../components/HomePage/GallerySec';
 import Footer from '../components/HomePage/Footer';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(false);
